@@ -3,7 +3,8 @@
     
     var modules = [
         'ngNewRouter',
-        'app.welcome'
+        'app.welcome',
+        'app.sigin'
     ];
     
     angular.module('app', modules)
@@ -14,10 +15,10 @@
     function AppController($router) {
         $router.config([
             {
-                path: '/', redirectTo: '/welcome'
+                path: '/', redirectTo: '/sigin'
             },
             {
-                path: '/welcome', component: 'welcome'
+                path: '/sigin', component: 'sigin'
             }
         ]);
     } 
