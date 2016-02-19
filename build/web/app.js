@@ -19,6 +19,9 @@
             },
             {
                 path: '/sigin', component: 'sigin'
+            },
+            {
+                path: '/welcome', component: 'welcome'
             }
         ]);
     } 
