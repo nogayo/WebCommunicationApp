@@ -1,6 +1,13 @@
-# ignorar los archivos que coincidan con los siguientes patrones
-/dist/
-build/
-~* 
-*.so 
+# Compiled sources #
+*.class
+
+# Package Files #
+*.jar
+
+# Log files #
 *.log
+
+# ignored paths
+/nbproject/private/
+/build/
+/dist/
