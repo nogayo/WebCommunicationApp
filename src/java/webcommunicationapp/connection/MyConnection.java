@@ -42,7 +42,11 @@ public class MyConnection {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
+    public static MyConnection getInstance() {
+        return instance;
+    }
+
     public boolean login(String ussername, String password) {
         boolean succefully = false;
 
