@@ -1,13 +1,16 @@
-# Compiled sources #
 *.class
+*.properties
+build/
+nbproject/
+## generic files to ignore
+*~
+*.xml
+*.lock
+*.DS_Store
+*.swp
+*.out
 
 # Package Files #
 *.jar
-
-# Log files #
-*.log
-
-# ignored paths
-/nbproject/private/
-/build/
-/dist/
+*.war
+*.ear
