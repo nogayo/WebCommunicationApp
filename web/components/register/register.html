@@ -1,0 +1,35 @@
+<div class="sigin">
+    <h2 class="col-md-offset-3"> <strong>Formulario deRegistro</strong></h2>
+
+    <form id='sigin' role="form" class="col-md-offset-3 col-md-3" ng-controller="RegisterController as registerCtrl">
+        <div class="form-group">
+            <label for="name">Nombre: </label>
+            <input type="text" class="form-control" id="name" 
+                   placeholder="Nombres" name="name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Apellido</label>
+            <input type="text" class="form-control" id="last_name" 
+                   placeholder="Apellidos" name="last_name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" 
+                   placeholder="user@example.com" name="email">
+        </div>
+        <div class="form-group">
+            <label for="ussername">Ussername</label>
+            <input type="text" class="form-control" id="ussername" 
+                   placeholder="Ussername" name="ussername">
+        </div>
+        <div class="form-group">
+            <label for="password">Contrase&ntilde;a</label>
+            <input type="password" class="form-control" id="password" 
+                   placeholder="Contrase&ntilde;a" name="user_password">
+        </div>
+        <button type="submit" class="btn btn-default">Registrar</button>
+        <a href="#/">
+            <button type="button" class="btn btn-default">Cancelar</button>
+        </a>
+    </form>
+</div>
