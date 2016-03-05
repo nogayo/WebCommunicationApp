@@ -4,7 +4,8 @@
     var modules = [
         'ngNewRouter',
         'app.welcome',
-        'app.sigin'
+        'app.sigin',
+        'app.register'
     ];
     
     
@@ -22,7 +23,7 @@
                 path: '/sigin', component: 'sigin'
             },
             {
-                path: '/welcome', component: 'welcome'
+                path: '/register', component: 'register'
             }
         ]);
     } 

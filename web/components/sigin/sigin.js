@@ -2,7 +2,7 @@
     'use strict';
     
     angular.module('app.sigin', [])
-           .controller('Sigin', Sigin);
+           .controller('SiginController', SiginController);
     
     function Sigin() {
         var vm = this;
