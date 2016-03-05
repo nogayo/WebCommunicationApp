@@ -23,9 +23,9 @@ public class MyConnection {
     private static final MyConnection instance = new MyConnection();
 
     private static final String DRIVER = "org.postgresql.Driver";
-    private static final String CONNECT_STRING = "jdbc:postgresql://localhost:5432/WebCommunicationApp";
+    private static final String CONNECT_STRING = "jdbc:postgresql://localhost:5432/webcomu";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "postgres";
+    private static final String PASSWORD = "bolivia";
     private static final String TRUE = "t";
 
     protected Connection connection;
@@ -52,7 +52,7 @@ public class MyConnection {
 
         try (Statement statement = connection.createStatement()) {
             ResultSet result = statement
-                    .executeQuery(String.format("SELECT verify_login('%s','%s')", ussername, password));
+                    .executeQuery(String.format("SELECT existe_docente('%s','%s')", ussername, password));
             if (result.next() && result.getString(1).equals(TRUE)) {
                 succefully = true;
             }
