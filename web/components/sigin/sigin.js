@@ -4,7 +4,7 @@
     angular.module('app.sigin', [])
            .controller('SiginController', SiginController);
     
-    function Sigin() {
+    function SiginController() {
         var vm = this;
     }
 })();

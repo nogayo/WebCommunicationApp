@@ -5,6 +5,7 @@
         'ngNewRouter',
         'app.welcome',
         'app.sigin',
+        'app.publicaDocente',
         'app.register'
     ];
     
@@ -24,6 +25,9 @@
             },
             {
                 path: '/register', component: 'register'
+            },
+            {
+                path: '/publicaDoc', component: 'publicaDocente'   
             }
         ]);
     } 
