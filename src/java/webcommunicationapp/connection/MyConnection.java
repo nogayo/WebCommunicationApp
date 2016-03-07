@@ -23,7 +23,7 @@ public class MyConnection {
     private static final MyConnection instance = new MyConnection();
 
     private static final String DRIVER = "org.postgresql.Driver";
-    private static final String CONNECT_STRING = "jdbc:postgresql://localhost:5432/webcomu";
+    private static final String CONNECT_STRING = "jdbc:postgresql://localhost:5432/WebCommunicationApp";
     private static final String USER = "postgres";
     private static final String PASSWORD = "postgres";
     private static final String TRUE = "t";
