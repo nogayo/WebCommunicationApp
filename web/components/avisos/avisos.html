@@ -1,0 +1,13 @@
+<div ng-controller="controladorP" class="about_bottom">
+            <div class="container">
+                <h1 align='center'><strong>Pulicaciones Docente</strong></h1>
+                <hr>
+                <div class="row">
+                    <div ng-repeat="publicacion in publicaciones" class="col-md-8 service_box">
+                        <h2>{{publicacion.titulo}}</h2>
+                        <p>{{publicacion.contenido}}</p>     
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
