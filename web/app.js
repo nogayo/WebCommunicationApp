@@ -5,7 +5,9 @@
         'ngNewRouter',
         'app.welcome',
         'app.sigin',
-        'app.register'
+        'app.register',
+        'app.avisos',
+        'app.info'
     ];
     
     
@@ -24,6 +26,12 @@
             },
             {
                 path: '/register', component: 'register'
+            },
+            {
+                path: '/avisos', component: 'avisos'
+            },
+            {
+                path: '/info', component: 'info'
             }
         ]);
     } 
