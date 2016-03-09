@@ -34,7 +34,7 @@ public class MyConnection {
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(CONNECT_STRING, USER, PASSWORD);
-            System.out.println("Succefully Connection\n\n");
+            System.out.println("Successful Connection\n\n");
         } catch (SQLException ex) {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Error in  Connection\n\n");
@@ -48,18 +48,30 @@ public class MyConnection {
     }
 
     public boolean login(String ussername, String password) {
-        boolean succefully = false;
+        boolean Successful = false;
 
         try (Statement statement = connection.createStatement()) {
             ResultSet result = statement
-                    .executeQuery(String.format("SELECT existe_docente('%s','%s')", ussername, password));
+                    .executeQuery(String.format("SELECT login_successful('%s','%s');", ussername, password));
             if (result.next() && result.getString(1).equals(TRUE)) {
-                succefully = true;
+                Successful = true;
             }
             statement.close();
         } catch (SQLException ex) {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return succefully;
+        return Successful;
+    }
+    
+    public void registerUser(String name, String lastName, String email, String usserName, String password) {
+        try (Statement statement = connection.createStatement()) {
+            statement.executeQuery(String.format("SELECT register_user('%s','%s','%s','%s','%s');",
+                                                  name, lastName, email, usserName, password));
+            System.out.println("Register Successful");
+            statement.close();
+        } catch (SQLException ex) {
+            System.out.println("Register Failed");
+            Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
