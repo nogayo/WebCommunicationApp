@@ -6,7 +6,8 @@
         'app.welcome',
         'app.sigin',
         'app.register',
-        'app.users'
+	'app.users',
+	'app.publicaDocente'
     ];
     
     
@@ -25,6 +26,9 @@
             },
             {
                 path: '/register', component: 'register'
+            },
+            {
+                path: '/publicaDoc', component: 'publicaDocente'   
             }
         ]);
     } 
