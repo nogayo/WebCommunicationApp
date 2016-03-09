@@ -6,6 +6,7 @@
         'app.welcome',
         'app.sigin',
         'app.register',
+        'app.users',
         'app.avisos',
         'app.info'
     ];

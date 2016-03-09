@@ -1,10 +1,11 @@
-(function(){
+(function () {
     'use strict';
-    
+
     angular.module('app.sigin', [])
-           .controller('SiginController', SiginController);
-    
-    function Sigin() {
+            .controller('SiginController', SiginController);
+
+    SiginController.$inject = ['UserService'];
+    function SiginController(UserService) {
         var vm = this;
     }
 })();
