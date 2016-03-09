@@ -5,7 +5,8 @@
         'ngNewRouter',
         'app.welcome',
         'app.sigin',
-        'app.register'
+        'app.register',
+        'app.users'
     ];
     
     

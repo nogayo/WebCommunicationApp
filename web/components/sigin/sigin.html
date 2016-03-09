@@ -1,7 +1,7 @@
 <div id="sigin">
     <h2 class="col-md-offset-2">Vienvenido a <strong>Web Application App</strong></h2>
 
-    <form id='sigin' role="form" class="col-md-offset-3 col-md-3" ng-controller="sigin">
+    <form id='sigin' role="form" class="col-md-offset-3 col-md-3" ng-controller="SiginController">
 
         <div class="form-group">
             <label for="ussername">Usuario</label>
@@ -17,5 +17,10 @@
         <a href="#/register">
             <button type="button" class="btn btn-default">Registarse</button>
         </a>
+        <li ng-repeat="user in SiginController.users">
+            <ul>
+                {{user.name}} -- {{user.lastname}}
+            </ul>
+        </li>
     </form>
 </div>
