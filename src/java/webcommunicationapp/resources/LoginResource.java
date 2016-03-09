@@ -13,8 +13,9 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Guido Cruz
  */
-@Path("products")
+@Path("login")
 @Produces(MediaType.APPLICATION_JSON)
 public class LoginResource {
+    
     
 }

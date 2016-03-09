@@ -5,8 +5,9 @@
         'ngNewRouter',
         'app.welcome',
         'app.sigin',
-        'app.publicaDocente',
-        'app.register'
+        'app.register',
+	'app.users',
+	'app.publicaDocente'
     ];
     
     
