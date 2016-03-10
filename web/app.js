@@ -7,6 +7,7 @@
         'app.sigin',
         'app.register',
         'app.users',
+        'app.tasks',
         'app.avisos',
         'app.info'
     ];
