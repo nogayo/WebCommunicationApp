@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>WebCommunicationApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/main.css" rel="stylesheet" type="text/css"/>
+
+        <script src="js/angular/angular.min.js" type="text/javascript"></script>
+        <script src="js/dist/router.es5.min.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/jquery/jquery-1.12.1.min.js" type="text/javascript"></script>
+
+        <script src="app.js" type="text/javascript"></script>
+        <script src="components/sigin/sigin.js" type="text/javascript"></script>
+        <script src="components/welcome/welcome.js" type="text/javascript"></script>
+        <script src="components/register/register.js" type="text/javascript"></script>
+        <script src="components/user/user.service.js" type="text/javascript"></script>
+<<<<<<< HEAD
+        <script src="components/publica-docente/publica-docente.js" type="text/javascript"></script>
+        <script src="components/comentarios/comentarios.js" type="text/javascript"></script>
+=======
+        <script src="components/aviso/aviso.service.js" type="text/javascript"></script>
+        <script src="components/avisos/avisos.js" type="text/javascript"></script>
+        <script src="components/info/info.js" type="text/javascript"></script>
+        
+>>>>>>> a8a73e1c5478210548ac6f9da17c424fd1d85f4c
+    </head>
+    <body ng-app="app" ng-controller="AppController">
+        <nav class="navbar navbar-default navbar-fixed-top" ng-show='true'>
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Web Communication App</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="">Comentarios</a></li>
+                        <li><a href="/avisos">Publicaciones</a></li>
+                        <li><a href="/info">Informacion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="main" class="container margin-top" ng-viewport>
+        </div>
+    </body>
+</html>
