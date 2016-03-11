@@ -7,7 +7,8 @@
         'app.sigin',
         'app.register',
 	'app.users',
-	'app.publicaDocente'
+	'app.publicaDocente',
+        'app.comentarios'
     ];
     
     
@@ -29,6 +30,9 @@
             },
             {
                 path: '/publicaDoc', component: 'publicaDocente'   
+            },
+                        {
+                path: '/comentarios', component: 'comentarios'   
             }
         ]);
     } 
