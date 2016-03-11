@@ -46,26 +46,28 @@ public class MyConnection {
         return instance;
     }
 
-    public boolean login(String ussername, String password) {
-        boolean Successful = false;
-
+    public Session login(String ussername, String password) {
+        Session session = new Session();
         try (Statement statement = connection.createStatement()) {
             ResultSet result = statement
                     .executeQuery(String.format("SELECT login_successful('%s','%s');", ussername, password));
             if (result.next() && result.getString(1).equals(TRUE)) {
-                Successful = true;
+                session.setLoginValue("true");
+                session.setUssername(ussername);
+            } else {
+                session.setLoginValue("false");
             }
             statement.close();
         } catch (SQLException ex) {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return Successful;
+        return session;
     }
-    
+
     public void registerUser(String name, String lastName, String email, String usserName, String password) {
         try (Statement statement = connection.createStatement()) {
             statement.executeQuery(String.format("SELECT register_user('%s','%s','%s','%s','%s');",
-                                                  name, lastName, email, usserName, password));
+                    name, lastName, email, usserName, password));
             System.out.println("Register Successful");
             statement.close();
         } catch (SQLException ex) {

@@ -16,6 +16,9 @@ public class Session {
     private String loginValue;
     private String ussername;
 
+    public Session() {
+    }
+    
     public String getLoginValue() {
         return loginValue;
     }
