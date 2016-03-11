@@ -1,0 +1,39 @@
+<div class="publicarDocente">
+    
+    <form id="publicar" role="form" class="col-md-offset-1 col-md-12" ng-controller="PublicaDocenteController as PDController">
+        <div class="form-group">
+            <br>
+            <label for="name">Titulo del aviso/tarea: </label>
+            <br/>
+            <textarea ng-model="PDController.titulo" style="resize: none" name="titulo" class="col-md-4 col-sm-7 col-xs-8">   
+            </textarea>
+            <br><br><br>
+            <label for="name">Aviso/Tarea: </label>
+            <br/>
+            <textarea ng-model="PDController.aviso" rows="5" style="resize: none" name="aviso" class="form-group col-md-8 col-sm-11 col-xs-12 ">   
+            </textarea>
+            <br><br><br><br>
+        </div>
+        <br/><br/>
+        <div class="col-md-offset-6">
+            <button type="button" ng-click="PDController.saveAviso()" class="btn btn-default">Publicar </button>
+            <a href="#/avisos">
+                <button type="button" class="btn btn-default">Cancelar</button>
+            </a>
+        </div>
+    </form>
+</div>
+
+<div ng-controller="ServiceController" class="about_bottom">
+    <div class="container">
+        <h1 align='center'><strong>Publicaciones Docente</strong></h1>
+        <hr>
+        <div class="row">
+            <div ng-repeat="publicacion in publicaciones" class="col-md-12 service_box">
+                <h2>{{publicacion.titulo}}</h2>
+                <p>{{publicacion.aviso}}</p>     
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

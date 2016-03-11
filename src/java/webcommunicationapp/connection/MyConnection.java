@@ -10,8 +10,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import webcommunicationapp.model.Publicacion;
 
 /**
  *
@@ -75,4 +78,39 @@ public class MyConnection {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public void guardarAviso(String titulo,String aviso){
+        try (Statement statement = connection.createStatement()) {
+            statement.executeQuery(String.format("INSERT INTO avisos ('titulo','aviso') VALUES ('%s','%s');",
+                                                  titulo, aviso));
+            System.out.println("Successful");
+            statement.close();
+        } catch (SQLException ex) {
+            System.out.println("Failed");
+            Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public List<Publicacion> obtenerAvisos() {
+        List<Publicacion> res=new ArrayList<Publicacion>();
+         try
+          {
+         Statement st = connection.createStatement();
+         ResultSet resultado = st.executeQuery(String.format("SELECT titulo,aviso FROM avisos"));
+         
+         while (resultado.next())
+         {
+             Publicacion p=new Publicacion();
+             p.setTitulo(resultado.getString(1));
+             p.setAviso(resultado.getString(2));
+             res.add(0,p);
+             
+         }
+        }
+        catch (SQLException exc)
+        {
+                System.out.println("Error:"+exc.getMessage());
+        } 
+         return res;
+    }
+    
 }
