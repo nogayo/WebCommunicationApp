@@ -8,7 +8,7 @@
     function RegisterController(UserService, $location) {
         var vm = this;
         vm.name;
-        vm.lastName;
+        vm.lastname;
         vm.email;
         vm.ussername;
         vm.password;
@@ -16,11 +16,12 @@
         vm.saveUser = function () {
             var user = {
                 name: vm.name,
-                lastName: vm.lastName,
                 email: vm.email,
+                lastname: vm.lastname,
                 ussername: vm.ussername,
                 password: vm.password
             };
+            
             UserService.registerUser(onSuccess, onError, user);
         };
         
@@ -31,7 +32,6 @@
         
         function onError() {
             console.log('user not register');
-            $location.path('/sigin');
         }
     }
 })();

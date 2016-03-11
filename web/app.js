@@ -9,6 +9,10 @@
 	'app.users',
 	'app.publicaDocente',
         'app.comentarios'
+        'app.users',
+        'app.tasks',
+        'app.avisos',
+        'app.info'
     ];
     
     
@@ -30,9 +34,10 @@
             },
             {
                 path: '/publicaDoc', component: 'publicaDocente'   
+                path: '/avisos', component: 'avisos'
             },
-                        {
-                path: '/comentarios', component: 'comentarios'   
+            {
+                path: '/info', component: 'info'
             }
         ]);
     } 

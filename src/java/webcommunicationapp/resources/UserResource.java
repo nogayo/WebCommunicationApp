@@ -45,7 +45,7 @@ public class UserResource {
     @POST
     public void registerUser(User user) {
         String name = user.getName();
-        String lastName = user.getLastName();
+        String lastName = user.getLastname();
         String email = user.getEmail();
         String ussername = user.getUssername();
         String password = user.getPassword();

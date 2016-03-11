@@ -14,7 +14,7 @@ import java.util.Objects;
 public class User {
 
     private String name;
-    private String lastName;
+    private String lastname;
     private String email;
     private String ussername;
     private String password;
@@ -30,12 +30,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLast_name(String last_name) {
-        this.lastName = last_name;
+    public void setLastname(String lastName) {
+        this.lastname = lastName;
     }
 
     public String getEmail() {

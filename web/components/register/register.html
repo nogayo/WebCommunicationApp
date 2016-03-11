@@ -1,16 +1,16 @@
     <div class="register">
     <h2 class="col-md-offset-3"> <strong>Formulario de Registro</strong></h2>
 
-    <form id="sigin" class="col-md-offset-3 col-md-3" ng-controller="RegisterController as registerCtrl">
+    <form id="sigin" class="col-md-offset-3 col-sm-3-offset-3 col-md-3 col-sm-3 col-lg-3" ng-controller="RegisterController as registerCtrl">
         <div class="form-group">
-            <label for="name">Nombre: </label>
+            <label for="name">Nombre </label>
             <input ng-model="registerCtrl.name" type="text" class="form-control" id="name" 
                    placeholder="Nombres">
         </div>
         <div class="form-group">
-            <label for="last_name">Apellido</label>
-            <input ng-model="registerCtrl.lastName" type="text" class="form-control" id="last_name" 
-                   placeholder="Apellidos">
+            <label for="last">Apellido</label>
+            <input ng-model="registerCtrl.lastname" type="text" class="form-control" id="last" 
+                   placeholder="Apellido">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
