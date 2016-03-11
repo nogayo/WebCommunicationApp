@@ -8,7 +8,7 @@
         'app.register',
 	'app.users',
 	'app.publicaDocente',
-        'app.comentarios'
+        'app.comentarios',
         'app.users',
         'app.tasks',
         'app.avisos',
@@ -33,7 +33,9 @@
                 path: '/register', component: 'register'
             },
             {
-                path: '/publicaDoc', component: 'publicaDocente'   
+                path: '/publicaDoc', component: 'publicaDocente'      
+            },
+            {
                 path: '/avisos', component: 'avisos'
             },
             {
