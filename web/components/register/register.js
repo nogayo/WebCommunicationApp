@@ -33,7 +33,6 @@
         
         function onError() {
             console.log('user not register');
-            $location.path('/sigin');
         }
     }
 })();
