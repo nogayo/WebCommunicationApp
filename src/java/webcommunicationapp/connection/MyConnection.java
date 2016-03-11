@@ -80,7 +80,7 @@ public class MyConnection {
     }
     public void guardarAviso(String titulo,String aviso){
         try (Statement statement = connection.createStatement()) {
-            statement.executeQuery(String.format("INSERT INTO avisos ('titulo','aviso') VALUES ('%s','%s');",
+            statement.executeQuery(String.format("INSERT INTO avisos (titulo,aviso) VALUES ('%s','%s');",
                                                   titulo, aviso));
             System.out.println("Successful");
             statement.close();
