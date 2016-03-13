@@ -40,6 +40,9 @@
             },
             {
                 path: '/info', component: 'info'
+            },
+            {
+                path: '/comentarios', component: 'comentarios'
             }
         ]);
     } 
