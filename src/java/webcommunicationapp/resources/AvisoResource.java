@@ -42,16 +42,16 @@ public class AvisoResource {
     @GET
     public List<Publicacion> getAll() {
         //No pude probrar que la BD funciona, por eso lo comente esta parte del codigo.
-        //return MyConnection.getInstance().obtenerAvisos();
+        return MyConnection.getInstance().obtenerAvisos();
         
-        return list;
+//        return list;
     }
 
     @POST
     public void saveTask(Publicacion p) {
         String titulo = p.getTitulo();
         String aviso = p.getAviso();
-        list.add(0,p);
-        //MyConnection.getInstance().guardarAviso(titulo, aviso);
+//        list.add(0,p);
+        MyConnection.getInstance().guardarAviso(titulo, aviso);
     }
 }
