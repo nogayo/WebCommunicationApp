@@ -89,6 +89,17 @@ public class MyConnection {
             Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+        public void guardarComentario(String comentario){
+        try (Statement statement = connection.createStatement()) {
+            statement.executeQuery(String.format("INSERT INTO post (cod_user, cod_tipo_comen, descrip_post) VALUES ('1','1','%s');",
+                                                  comentario));
+            System.out.println("Successful");
+            statement.close();
+        } catch (SQLException ex) {
+            System.out.println("Failed");
+            Logger.getLogger(MyConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     public List<Publicacion> obtenerAvisos() {
         List<Publicacion> res=new ArrayList<Publicacion>();

@@ -9,7 +9,7 @@
                return $http({method:'GET',url:'http://localhost:8080/WebCommunicationApp/api/aviso'});
             };
             this.update = function(aviso) {
-               return $http({method:'POST', url:'http://localhost:8080/WebCommunicationApp/api/aviso',data:aviso});  
+               return $http({method:'POST', url:'http://localhost:8080/WebCommunicationApp/api/aviso',data:aviso});
             };
     });
     
