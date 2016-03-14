@@ -9,6 +9,7 @@
 	'app.users',
 	'app.publicaDocente',
         'app.comentarios',
+        'app.comentario',
         'app.users',
         'app.tasks',
         'app.avisos',

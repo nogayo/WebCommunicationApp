@@ -2,7 +2,7 @@
     'use strict';
 
 
-    var myApp = angular.module('app.comentarios',[]);
+    var myApp = angular.module('app.comentario',[]);
 
     myApp.service('ComentarioService',function($http){
             this.query = function() {

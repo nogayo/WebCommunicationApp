@@ -49,7 +49,6 @@ public class ComentarioResource {
     @POST
     public void saveComentario(Comentario p) {
         String comentario = p.getComentario();
-//        list.add(0,p);
         MyConnection.getInstance().guardarComentario(comentario);
     }
 }
