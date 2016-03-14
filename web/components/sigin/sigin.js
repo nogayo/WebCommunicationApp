@@ -25,7 +25,7 @@
             if (data.data.loginValue === "true") {
                 vm.session = data.data;
                 console.log('user login successful');
-                $location.path('/publicaDoc');
+                $location.path('/avisos');
             } else {
                 onError();
             }

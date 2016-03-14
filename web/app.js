@@ -6,6 +6,9 @@
         'app.welcome',
         'app.sigin',
         'app.register',
+	'app.users',
+        'app.comentarios',
+        'app.comentario',
         'app.users',
         'app.tasks',
         'app.avisos',
@@ -38,6 +41,9 @@
             },
             {
                 path: '/info', component: 'info'
+            },
+            {
+                path: '/comentarios', component: 'comentarios'
             }
         ]);
     } 
