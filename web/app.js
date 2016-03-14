@@ -34,9 +34,6 @@
                 path: '/register', component: 'register'
             },
             {
-                path: '/publicaDoc', component: 'publicaDocente'      
-            },
-            {
                 path: '/avisos', component: 'avisos'
             },
             {
