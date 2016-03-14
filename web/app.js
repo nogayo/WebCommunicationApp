@@ -7,7 +7,6 @@
         'app.sigin',
         'app.register',
 	'app.users',
-	'app.publicaDocente',
         'app.comentarios',
         'app.comentario',
         'app.users',
