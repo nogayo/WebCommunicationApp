@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import webcommunicationapp.model.Comentario;
 import webcommunicationapp.model.Publicacion;
 
 /**
@@ -114,6 +115,27 @@ public class MyConnection {
              p.setTitulo(resultado.getString(1));
              p.setAviso(resultado.getString(2));
              res.add(0,p);
+             
+         }
+        }
+        catch (SQLException exc)
+        {
+                System.out.println("Error:"+exc.getMessage());
+        } 
+         return res;
+    }
+        public List<Comentario> obtenerComentarios() {
+        List<Comentario> res=new ArrayList<Comentario>();
+         try
+          {
+         Statement st = connection.createStatement();
+         ResultSet resultado = st.executeQuery(String.format("SELECT descrip_post FROM post"));
+         
+         while (resultado.next())
+         {
+             Comentario c =new Comentario();
+             c.setComentario(resultado.getString(1));
+             res.add(0,c);
              
          }
         }
