@@ -32,18 +32,18 @@ public class ComentarioResource {
     public ComentarioResource() {
         list = new ArrayList();
         for (int i = 0; i < 10; i++) {
-            Comentario p = new Comentario();            
-            p.setComentario("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iure facilis necessitatibus ipsam, itaque consequatur illum odit vero minus pariatur quae inventore provident id deleniti ab nisi harum libero soluta.");
-            list.add(p);
+            Comentario c = new Comentario();            
+            c.setComentario("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iure facilis necessitatibus ipsam, itaque consequatur illum odit vero minus pariatur quae inventore provident id deleniti ab nisi harum libero soluta.");
+            list.add(c);
         }
     }
 
     @GET
     public List<Comentario> getAll() {
         //No pude probrar que la BD funciona, por eso lo comente esta parte del codigo.
-        //return MyConnection.getInstance().obtenerAvisos();
+        return MyConnection.getInstance().obtenerComentarios();
         
-        return list;
+        //return list;
     }
 
     @POST
