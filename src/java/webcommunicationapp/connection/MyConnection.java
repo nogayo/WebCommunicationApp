@@ -80,7 +80,7 @@ public class MyConnection {
     }
     public void guardarAviso(String titulo,String aviso){
         try (Statement statement = connection.createStatement()) {
-            statement.executeQuery(String.format("INSERT INTO avisos (titulo,aviso) VALUES ('%s','%s');",
+            statement.executeQuery(String.format("INSERT INTO post(cod_user, cod_tipo_comen, titulo_post, descrip_post) VALUES (28, 1,'%s','%s');",
                                                   titulo, aviso));
             System.out.println("Successful");
             statement.close();
@@ -106,7 +106,7 @@ public class MyConnection {
          try
           {
          Statement st = connection.createStatement();
-         ResultSet resultado = st.executeQuery(String.format("SELECT titulo,aviso FROM avisos"));
+         ResultSet resultado = st.executeQuery(String.format("SELECT titulo_post,descrip_post FROM post"));
          
          while (resultado.next())
          {
