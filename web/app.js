@@ -12,6 +12,7 @@
         'app.users',
         'app.tasks',
         'app.avisos',
+        'app.publicar',
         'app.info'
     ];
     
@@ -34,6 +35,9 @@
             },
             {
                 path: '/avisos', component: 'avisos'
+            },
+            {
+                path: '/publicar', component: 'publicar'  
             },
             {
                 path: '/info', component: 'info'
