@@ -21,7 +21,7 @@ import webcommunicationapp.model.Message;
 
 /**
  *
- * @author nogayo
+ * @author jhosmar
  */
 @Stateless
     @Path("comentario")

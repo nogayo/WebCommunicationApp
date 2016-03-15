@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author ariel
+ * @author jhosmar
  */
 public class Comentario {
     private String usuario;
